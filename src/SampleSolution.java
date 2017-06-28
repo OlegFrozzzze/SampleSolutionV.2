@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  * Created by ОЛЕГ on 28.06.2017.
@@ -131,5 +132,10 @@ public class SampleSolution {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    public  static int getUserChoise(){
+        System.out.println("Введите номер выбранного варианта");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 }
