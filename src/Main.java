@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         // Алгоритм
         // Вывод меню
+        SampleSolution.menuShow();
         // Выбор из меню нужное решение
         // Вывод выброного решения на экран
 

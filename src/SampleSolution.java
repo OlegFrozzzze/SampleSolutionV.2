@@ -72,30 +72,62 @@ public class SampleSolution {
         File sampleOneHtml = new File("A:\\AllProject\\SampleSolution\\SampleOne.html");
         try {
             PrintWriter print = new PrintWriter(sampleOneHtml);
-            for (int i = 1; i < 30; i++) {
-                if (i % 2 != 0)
-                {
-                    print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
-                    print.close();
-                }
+            String b = "<!DOCTYPE html>" + "\n" +
+                    "<html lang=\"ru\">" + "\n" +
+                    "   <head>" + "\n" +
+                    "       <meta charset=\"UTF-8\">" + "\n" +
+                    "       <title>Document</title>" + "\n" +
+                    "   </head>" + "\n" +
+                    "   <body>" + "\n" +
+                    "       <table border=\"1\">";
+            String d = "    </table>" + "\n" +
+                    "   </body>" + "\n" +
+                    "</html>";
+            String tr = "<tr>";
+            String td = "<td>";
+            String trClose = "</tr>";
+            String tdClose = "</td>";
+            print.println(b);
+            for (int a = 1; a < 26; a++) {
+                print.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
             }
+            print.println(d);
+            print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
 
     }
+
     public static void sampleSolutionToHtmlFileSampleTwo() {
         //создать объект куда мы записываем решение примера
         File sampleTwoHtml = new File("A:\\AllProject\\SampleSolution\\SampleTwo.html");
         try {
             PrintWriter print = new PrintWriter(sampleTwoHtml);
-            for (int i = 1; i < 30; i++) {
-                if (i % 2 != 0) {
-                    print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
-                    print.close();
+            String b = "<!DOCTYPE html>" + "\n" +
+                    "<html lang=\"ru\">" + "\n" +
+                    "   <head>" + "\n" +
+                    "       <meta charset=\"UTF-8\">" + "\n" +
+                    "       <title>Document</title>" + "\n" +
+                    "   </head>" + "\n" +
+                    "   <body>" + "\n" +
+                    "       <table border=\"1\">";
+            String d = "    </table>" + "\n" +
+                    "   </body>" + "\n" +
+                    "</html>";
+            String tr = "<tr>";
+            String td = "<td>";
+            String trClose = "</tr>";
+            String tdClose = "</td>";
+            print.println(b);
+            for (int a = 1; a < 26; a++) {
+                if (a % 2 != 0) {
+                    print.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
                 }
             }
+            print.println(d);
+            print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
