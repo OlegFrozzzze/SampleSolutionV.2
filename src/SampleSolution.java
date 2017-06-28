@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 /**
  * Created by ОЛЕГ on 28.06.2017.
  */
@@ -32,11 +36,43 @@ public class SampleSolution {
     }
 
     // Создать методы для вывода результата в файлы txt и html
-    public static void sampleSolutionToTxtFile() {
+    public static void sampleSolutionToTxtFileSampleOne() {
         //создать объект куда мы записываем решение примера
+        File sampleOne = new File("A:\\AllProject\\SampleSolution\\SampleOne.txt");
+        try {
+            PrintWriter print = new PrintWriter(sampleOne);
+            for (int i = 1; i < 30; i++) {
+                print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
+                print.close();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static void sampleSolutionToHtmlFile() {
+    public static void sampleSolutionToTxtFileSampleTwo() {
+        //создать объект куда мы записываем решение примера
+        File sampleOne = new File("A:\\AllProject\\SampleSolution\\SampleTwo.txt");
+        try {
+            PrintWriter print = new PrintWriter(sampleOne);
+            for (int i = 1; i < 30; i++) {
+                if (i % 2 != 0) {
+                    print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
+                    print.close();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void sampleSolutionToHtmlFileSampleOne() {
+        //создать объект куда мы записываем решение примера
+        
+
+    }
+    public static void sampleSolutionToHtmlFileSampleTwo() {
         //создать объект куда мы записываем решение примера
     }
 }
