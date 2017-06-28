@@ -38,9 +38,9 @@ public class SampleSolution {
     // Создать методы для вывода результата в файлы txt и html
     public static void sampleSolutionToTxtFileSampleOne() {
         //создать объект куда мы записываем решение примера
-        File sampleOne = new File("A:\\AllProject\\SampleSolution\\SampleOne.txt");
+        File sampleOneTxt = new File("A:\\AllProject\\SampleSolution\\SampleOne.txt");
         try {
-            PrintWriter print = new PrintWriter(sampleOne);
+            PrintWriter print = new PrintWriter(sampleOneTxt);
             for (int i = 1; i < 30; i++) {
                 print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
                 print.close();
@@ -52,9 +52,9 @@ public class SampleSolution {
 
     public static void sampleSolutionToTxtFileSampleTwo() {
         //создать объект куда мы записываем решение примера
-        File sampleOne = new File("A:\\AllProject\\SampleSolution\\SampleTwo.txt");
+        File sampleTwoTxt = new File("A:\\AllProject\\SampleSolution\\SampleTwo.txt");
         try {
-            PrintWriter print = new PrintWriter(sampleOne);
+            PrintWriter print = new PrintWriter(sampleTwoTxt);
             for (int i = 1; i < 30; i++) {
                 if (i % 2 != 0) {
                     print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
@@ -69,10 +69,35 @@ public class SampleSolution {
 
     public static void sampleSolutionToHtmlFileSampleOne() {
         //создать объект куда мы записываем решение примера
-        
+        File sampleOneHtml = new File("A:\\AllProject\\SampleSolution\\SampleOne.html");
+        try {
+            PrintWriter print = new PrintWriter(sampleOneHtml);
+            for (int i = 1; i < 30; i++) {
+                if (i % 2 != 0)
+                {
+                    print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
+                    print.close();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
 
     }
     public static void sampleSolutionToHtmlFileSampleTwo() {
         //создать объект куда мы записываем решение примера
+        File sampleTwoHtml = new File("A:\\AllProject\\SampleSolution\\SampleTwo.html");
+        try {
+            PrintWriter print = new PrintWriter(sampleTwoHtml);
+            for (int i = 1; i < 30; i++) {
+                if (i % 2 != 0) {
+                    print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
+                    print.close();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
