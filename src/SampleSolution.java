@@ -13,5 +13,11 @@ public class SampleSolution {
     public static void menuShow(){
      //Текст меню
     }
-    // Создать метод для вывода результата в файлы txt и html
+    // Создать методы для вывода результата в файлы txt и html
+    public static void sampleSolutionInTxtFile(){
+        //создать объект куда мы записываем решение примера 
+    }
+    public static void sampleSolutionInHtmlFile(){
+        //создать объект куда мы записываем решение примера
+    }
 }
