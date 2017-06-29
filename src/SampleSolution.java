@@ -28,12 +28,12 @@ public class SampleSolution {
     public static void menuShow() {
         //Текст меню
         System.out.println("Выберите один вариантов");
-        System.out.println("1) Последовательное попарное сложение чисел от 1 до 30");
-        System.out.println("2) Последовательное сложение чисел через один");
-        System.out.println("3) Вывод последовательного попарного сложения чисел от 1 до 30 в txt файл");
-        System.out.println("4) Вывод последовательного сложения чисел через один в txt файл");
-        System.out.println("5) Вывод последовательного попарного сложения чисел от 1 до 30 в html файл");
-        System.out.println("6) Вывод последовательного сложения чисел через один в html файл");
+        System.out.println("1) Последовательное попарное сложение чисел от 1 до 30.");
+        System.out.println("2) Последовательное сложение чисел через один.");
+        System.out.println("3) Вывод последовательного попарного сложения чисел от 1 до 30 в txt файл.");
+        System.out.println("4) Вывод последовательного сложения чисел через один в txt файл.");
+        System.out.println("5) Вывод последовательного попарного сложения чисел от 1 до 30 в html файл.");
+        System.out.println("6) Вывод последовательного сложения чисел через один в html файл.");
     }
 
     // Создать методы для вывода результата в файлы txt и html
@@ -44,8 +44,9 @@ public class SampleSolution {
             PrintWriter print = new PrintWriter(sampleOneTxt);
             for (int i = 1; i < 30; i++) {
                 print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
-                print.close();
             }
+            System.out.print("Был создан txt файл");
+            print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -59,9 +60,10 @@ public class SampleSolution {
             for (int i = 1; i < 30; i++) {
                 if (i % 2 != 0) {
                     print.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
-                    print.close();
                 }
             }
+            System.out.print("Был создан txt файл");
+            print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -81,10 +83,10 @@ public class SampleSolution {
                     "   </head>" + "\n" +
                     "   <body>" + "\n" +
                     "       <table border=\"1\">";
-            String d = "    </table>" + "\n" +
+            String d = "        </table>" + "\n" +
                     "   </body>" + "\n" +
                     "</html>";
-            String tr = "<tr>";
+            String tr = "           <tr>";
             String td = "<td>";
             String trClose = "</tr>";
             String tdClose = "</td>";
@@ -93,6 +95,7 @@ public class SampleSolution {
                 print.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
             }
             print.println(d);
+            System.out.print("Был создан html файл");
             print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -114,10 +117,10 @@ public class SampleSolution {
                     "   </head>" + "\n" +
                     "   <body>" + "\n" +
                     "       <table border=\"1\">";
-            String d = "    </table>" + "\n" +
+            String d = "        </table>" + "\n" +
                     "   </body>" + "\n" +
                     "</html>";
-            String tr = "<tr>";
+            String tr = "           <tr>";
             String td = "<td>";
             String trClose = "</tr>";
             String tdClose = "</td>";
@@ -128,13 +131,14 @@ public class SampleSolution {
                 }
             }
             print.println(d);
+            System.out.print("Был создан html файл");
             print.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
     public  static int getUserChoise(){
-        System.out.println("Введите номер выбранного варианта");
+        System.out.print("Введите номер выбранного варианта: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
