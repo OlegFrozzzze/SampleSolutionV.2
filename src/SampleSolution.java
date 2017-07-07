@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 /**
@@ -25,16 +26,16 @@ public class SampleSolution {
     }
 
     // Создать меню для выбора нужного варианта
-    public static void menuShow() {
+   // public static void menuShow() {
         //Текст меню
-        System.out.println("Выберите один вариантов");
-        System.out.println("1) Последовательное попарное сложение чисел от 1 до 30.");
-        System.out.println("2) Последовательное сложение чисел через один.");
-        System.out.println("3) Вывод последовательного попарного сложения чисел от 1 до 30 в txt файл.");
-        System.out.println("4) Вывод последовательного сложения чисел через один в txt файл.");
-        System.out.println("5) Вывод последовательного попарного сложения чисел от 1 до 30 в html файл.");
-        System.out.println("6) Вывод последовательного сложения чисел через один в html файл.");
-    }
+//        System.out.println("Выберите один вариантов");
+//        System.out.println("1) Последовательное попарное сложение чисел от 1 до 30.");
+//        System.out.println("2) Последовательное сложение чисел через один.");
+//        System.out.println("3) Вывод последовательного попарного сложения чисел от 1 до 30 в txt файл.");
+//        System.out.println("4) Вывод последовательного сложения чисел через один в txt файл.");
+//        System.out.println("5) Вывод последовательного попарного сложения чисел от 1 до 30 в html файл.");
+//        System.out.println("6) Вывод последовательного сложения чисел через один в html файл.");
+   // }
 
     // Создать методы для вывода результата в файлы txt и html
     public static void sampleSolutionToTxtFileSampleOne() {
@@ -141,5 +142,19 @@ public class SampleSolution {
         System.out.print("Введите номер выбранного варианта: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
+    }
+
+        static String[] nums = new String[1];
+    public  static void array() {
+        nums[0] = "Выберите один из вариантов\n" +
+                "1) Последовательное попарное сложение чисел от 1 до 30.\n" +
+                "2) Последовательное сложение чисел через один.\n" +
+                "3) Вывод последовательного попарного сложения чисел от 1 до 30 в txt файл.\n" +
+                "4) Вывод последовательного сложения чисел через один в txt файл.\n" +
+                "5) Вывод последовательного попарного сложения чисел от 1 до 30 в html файл.\n" +
+                "6) Вывод последовательного сложения чисел через один в html файл.\"";
+        System.out.println(nums[0]);
+
+
     }
 }
